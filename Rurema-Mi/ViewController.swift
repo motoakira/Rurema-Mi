@@ -12,14 +12,20 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var webView: WKWebView!
      
+    @IBAction func root(_ sender: UIButton) {
+        webView.load(rootURLrequest())
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let request = URLRequest(url: URL(string: RUREMA_URI)!)
+        let request = rootURLrequest()
         webView.load(request)
 
     }
 
-
+private
+    func rootURLrequest() -> URLRequest {
+        return URLRequest(url: URL(string: RUREMA_URI)!)
+    }
 }
 
