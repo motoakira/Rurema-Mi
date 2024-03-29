@@ -5,8 +5,10 @@
 //  Created by 進藤 元明 on 2023/03/25.
 //
 
-import XCTest
+import UIKit
 import WebKit
+import XCTest
+
 @testable import Rurema_Mi
 
 final class Rurema_MiTests: XCTestCase {

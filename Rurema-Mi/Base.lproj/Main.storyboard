@@ -26,18 +26,16 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="root" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOW-WB-WKw">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="root" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOW-WB-WKw">
                                 <rect key="frame" x="80" y="25" width="90" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="tree" catalog="system" title="root"/>
                                 <connections>
                                     <action selector="root:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PGS-Sd-aUm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9I-Fe-MdU">
-                                <rect key="frame" x="590" y="25" width="90" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9I-Fe-MdU">
+                                <rect key="frame" x="540" y="25" width="90" height="70"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="magnifyingglass" catalog="system" title="search">
                                     <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
@@ -49,6 +47,14 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="b9I-Fe-MdU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Etm-M0-BCZ"/>
+                            <constraint firstItem="TOW-WB-WKw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="25" id="GZk-KW-pEu"/>
+                            <constraint firstItem="b9I-Fe-MdU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="TLC-Lg-MB1"/>
+                            <constraint firstItem="TOW-WB-WKw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="80" id="a9Z-8b-uIN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b9I-Fe-MdU" secondAttribute="trailing" constant="8" id="mNQ-Zc-gd4"/>
+                            <constraint firstItem="b9I-Fe-MdU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nBV-jV-CQP"/>
+                        </constraints>
                     </view>
                     <size key="freeformSize" width="820" height="1180"/>
                     <connections>
