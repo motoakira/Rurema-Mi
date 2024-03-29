@@ -7,8 +7,6 @@
 
 import UIKit
 
-let RUREMA_URI = "https://docs.ruby-lang.org/ja/"
-let RUREMA_SEARCH_URI = "https://docs.ruby-lang.org/ja/search/"
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
