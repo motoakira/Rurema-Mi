@@ -17,6 +17,7 @@
 		185E95C329CEDA41003A5104 /* Rurema_MiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E95C229CEDA41003A5104 /* Rurema_MiTests.swift */; };
 		185E95CD29CEDA41003A5104 /* Rurema_MiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E95CC29CEDA41003A5104 /* Rurema_MiUITests.swift */; };
 		185E95CF29CEDA41003A5104 /* Rurema_MiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E95CE29CEDA41003A5104 /* Rurema_MiUITestsLaunchTests.swift */; };
+		188CCD0E2BB78C21006B12A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185E95B129CEDA3F003A5104 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -245,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				188CCD0E2BB78C21006B12A4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

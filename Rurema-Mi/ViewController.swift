@@ -13,7 +13,7 @@ let RUREMA_SEARCH_URI: String = "https://docs.ruby-lang.org/ja/search/"
 
 class ViewController: UIViewController {
 
-    @IBOutlet var webView: WKWebView!
+    @IBOutlet weak var webView: WKWebView!
       
     @IBAction func root(_ sender: UIButton) {
         webView.load(rootURLrequest())
@@ -26,9 +26,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.view.addSubview(webView)
         let request = rootURLrequest()
         webView.load(request)
 
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        webView.removeFromSuperview()
     }
 
 private
