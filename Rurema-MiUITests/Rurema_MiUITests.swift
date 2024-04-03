@@ -30,6 +30,33 @@ final class Rurema_MiUITests: XCTestCase {
         let app = XCUIApplication()
         app.launch()
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let ruby_ver = "Ruby 3.3"
+        let rootStaticText = app/*@START_MENU_TOKEN@*/.staticTexts["root"]/*[[".buttons[\"root\"].staticTexts[\"root\"]",".staticTexts[\"root\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        
+        let webViewsQuery = app.webViews.webViews.webViews
+        let top_page = webViewsQuery.staticTexts[ruby_ver]
+        XCTAssertNotNil(top_page)
+        top_page.tap()
+        
+        let some_link_text = "Rubyの起動"
+        let some_link = webViewsQuery.staticTexts[some_link_text]
+        XCTAssertNotNil(some_link)
+        some_link.tap()
+        let some_link_target = app.webViews.webViews.webViews.otherElements[some_link_text]
+        XCTAssertNotNil(some_link_target)
+        
+        app.buttons["root"].tap()
+        XCTAssertNotNil(webViewsQuery.staticTexts[ruby_ver])
+
+        app/*@START_MENU_TOKEN@*/.staticTexts["search"]/*[[".buttons[\"search\"].staticTexts[\"search\"]",".staticTexts[\"search\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        let search_title = app.webViews.webViews.webViews.otherElements["最速Rubyリファレンスマニュアル検索！ | るりまサーチ"]
+        XCTAssertNotNil(search_title)
+        let text_field = search_title.children(matching: .other).element(boundBy: 3).children(matching: .textField).element
+        text_field.tap()
+        text_field.typeText("map")
+        XCTAssertNotNil(webViewsQuery.staticTexts["Array#map -> Enumerator"])
+        rootStaticText.tap()
+        XCTAssertNotNil(webViewsQuery.staticTexts[ruby_ver])
     }
 
     func testLaunchPerformance() throws {
@@ -40,6 +67,12 @@ final class Rurema_MiUITests: XCTestCase {
             }
         }
     }
-    
- 
+/*
+    func testSearchString() throws {
+        let app = XCUIApplication()
+        app.launch()
+        XCUIApplication()/*@START_MENU_TOKEN@*/.staticTexts["search"]/*[[".buttons[\"search\"].staticTexts[\"search\"]",".staticTexts[\"search\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        
+    }
+*/
 }

@@ -28,31 +28,32 @@ final class Rurema_MiTests: XCTestCase {
         // Storyboardから特定のViewControllerのインスタンスを取得します
         let viewController = storyboard.instantiateViewController(withIdentifier: "RuremaViewControllerIdentifier")
   */
-        let viewController = Rurema_MiTests.viewController()
-        while ( viewController.webView == nil ) {}
+/*        let viewController = Rurema_MiTests.viewController()
+//        while ( viewController.webView == nil ) {}
         viewController.viewDidLoad()
+*/
     }
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-/*    func testExample() throws {
+    func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         // Any test you write for XCTest can be annotated as throws and async.
         // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
         // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
     }
-*/
-/*    func testPerformanceExample() throws {
+
+    func testPerformanceExample() throws {
         // This is an example of a performance test case.
         self.measure {
             // Put the code you want to measure the time of here.
         }
     }
-*/
-    func testRootButtonTap() {
+
+/*    func testRootButtonTap() {
         let viewController = Rurema_MiTests.viewController()
         let webView: WKWebView = viewController.webView
  //        viewController.loadViewIfNeeded() // ビューをロード
@@ -62,8 +63,8 @@ final class Rurema_MiTests: XCTestCase {
 //        XCTAssertEqual(webView.url!.absoluteString, RUREMA_URI)
 //        XCTAssertTrue(webView.url == URL(string: RUREMA_URI))
     }
-    
-    func testSearchButtonTap() {
+*/
+/*    func testSearchButtonTap() {
         let viewController = Rurema_MiTests.viewController()
         let webView: WKWebView = viewController.webView
 //         viewController.loadViewIfNeeded() // ビューをロード
@@ -72,4 +73,5 @@ final class Rurema_MiTests: XCTestCase {
 //        XCTAssertEqual(webView.url!.absoluteString, RUREMA_SEARCH_URI)
         XCTAssertEqual(webView.url, URL(string: RUREMA_SEARCH_URI))
      }
+*/
 }
