@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "rulie_square.png",
+      "filename" : "るりま見ロゴ338.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "るりま見ロゴ676.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "るりま見ロゴ1024.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
