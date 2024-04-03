@@ -17,27 +17,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3LW-Av-RDh">
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3LW-Av-RDh">
                                 <rect key="frame" x="0.0" y="100" width="820" height="1050"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="root" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOW-WB-WKw">
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="root" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOW-WB-WKw">
                                 <rect key="frame" x="80" y="25" width="90" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="eXV-eu-lSo"/>
+                                    <constraint firstAttribute="height" constant="70" id="m9n-7W-tOF"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="tree" catalog="system" title="root"/>
                                 <connections>
                                     <action selector="root:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PGS-Sd-aUm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9I-Fe-MdU">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9I-Fe-MdU">
                                 <rect key="frame" x="540" y="25" width="90" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="Rg0-fo-Ukx"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="magnifyingglass" catalog="system" title="search">
                                     <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
@@ -49,6 +53,17 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TOW-WB-WKw" firstAttribute="baseline" secondItem="b9I-Fe-MdU" secondAttribute="baseline" id="2yA-dG-NXj"/>
+                            <constraint firstItem="TOW-WB-WKw" firstAttribute="top" secondItem="b9I-Fe-MdU" secondAttribute="top" id="3nr-Eb-fn4"/>
+                            <constraint firstItem="TOW-WB-WKw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="5qK-KV-1fF"/>
+                            <constraint firstItem="TOW-WB-WKw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="1" id="8Ao-1R-bCR"/>
+                            <constraint firstItem="3LW-Av-RDh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Pz-8M-x8l"/>
+                            <constraint firstItem="3LW-Av-RDh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Zdw-H8-zy6"/>
+                            <constraint firstItem="3LW-Av-RDh" firstAttribute="top" secondItem="TOW-WB-WKw" secondAttribute="bottom" constant="5" id="ddg-7w-CyK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b9I-Fe-MdU" secondAttribute="trailing" constant="190" id="fEN-5K-ZcR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3LW-Av-RDh" secondAttribute="bottom" constant="10" id="yRo-ZZ-ZFY"/>
+                        </constraints>
                     </view>
                     <size key="freeformSize" width="820" height="1180"/>
                     <connections>
